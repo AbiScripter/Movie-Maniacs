@@ -14,6 +14,7 @@ export default function StarRating({
   maxRating = 5,
   color = "#fcc419",
   size = 48,
+  onMovieRating,
 }) {
   //styles
   const textStyle = {
@@ -28,6 +29,7 @@ export default function StarRating({
 
   function handleRating(id) {
     setRating(id);
+    onMovieRating(id);
   }
 
   function handleHoverRating(id) {
